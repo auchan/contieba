@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+if __name__ == '__main__':
+    import sys
+    from baidu_tieba import tieba_monitor
+    if len(sys.argv) == 1:
+        sys.exit(tieba_monitor.monite())
+    elif len(sys.argv) == 2:
+        sys.exit(tieba_monitor.monite(sys.argv[1]))
+    else:
+        sys.exit(tieba_monitor.monite(sys.argv[1:3]))
+

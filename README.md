@@ -1,5 +1,6 @@
-a simple way to access baidu tieba
+contieba
 ---
+a consice way to access baidu tieba
 
 	command bar_name display_amount
 	        bar_name [display_amount=10]

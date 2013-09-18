@@ -1,7 +1,9 @@
-def getGBKCode(gbkFile='baidu_tieba/GBK1.1.txt',s=''): 
+import os, sys
+dirname = os.path.dirname(sys.argv[0])
+def getGBKCode(gbkFile=dirname+'/baidu_tieba/GBK1.1.txt',s=''): 
     #gbkFile字典文件 共3755个汉字 
     #s为要转换的汉字，暂且为gb2312编码，即从IDLE输入的汉字编码 
-
+    
     #读入字典 
     with open(gbkFile) as f: 
         gbk=f.read().split() 

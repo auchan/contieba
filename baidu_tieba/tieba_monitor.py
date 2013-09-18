@@ -35,9 +35,9 @@ command bar_name display_amount
                 print()
         # subject symbol
         if 'j_thread_list thread_top clearfix' in line:
-            not_top = re.findall('j_thread_list thread_top clearfix ".*?</li>(.*)', line)
+            not_top = re.findall('j_thread_list clearfix(.*)', line)
             if len(not_top) != 1:
-                raise ValueError('内容可能出错')
+                raise ValueError('置顶贴数为', len(not_top))
 
             contents = re.findall(r'class="threadlist_text.*?">(.*?)<s', not_top[0])
             authors = re.findall(r'class="tb_icon_author" title="主题(.*?)"', not_top[0])
